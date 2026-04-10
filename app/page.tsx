@@ -82,21 +82,8 @@ export default function Home() {
             </section>
           ) : null}
 
-          {current.questions ? (
-            <section className="panel panel-questions">
-              <h3>Preguntas guía</h3>
-              <div className="question-grid">
-                {current.questions.map((q) => (
-                  <article key={q} className="question-card">
-                    {q}
-                  </article>
-                ))}
-              </div>
-            </section>
-          ) : null}
         </div>
 
-        {current.quote ? <blockquote>{current.quote}</blockquote> : null}
 
         <footer className="controls">
           <button onClick={() => setIndex((prev) => Math.max(prev - 1, 0))} disabled={index === 0}>
